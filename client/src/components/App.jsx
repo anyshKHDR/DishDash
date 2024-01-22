@@ -1,10 +1,13 @@
 import React from "react";
+import Header from "./Header";
+import DishSuggestion from "./DishSuggestion";
 
 const App = ()=>{
     return(
-        <div>
-            <h1>Hello world</h1>
-        </div>
+        <>
+           <Header></Header> 
+           <DishSuggestion></DishSuggestion>
+        </>
     )
 }
 
