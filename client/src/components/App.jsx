@@ -1,12 +1,17 @@
 import React from "react";
 import Header from "./Header";
-import DishSuggestion from "./DishSuggestion";
+import DishSuggestion from "./Suggestion";
 
 const App = ()=>{
     return(
         <>
-           <Header></Header> 
-           <DishSuggestion></DishSuggestion>
+            <Header /> 
+            <DishSuggestion 
+                title = {"What's your mood?!"}
+            />
+            <DishSuggestion 
+                title = {"Top restaurant chains near you"} 
+            />
         </>
     )
 }

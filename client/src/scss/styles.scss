@@ -1,4 +1,5 @@
-@use "./abstracts/mixins" as mx;
+@use "./abstracts/mixins" as m;
+@use "./abstracts/variables" as v;
 
 body {
     background-color: rgb(52, 21, 31);
@@ -9,7 +10,7 @@ body {
 $headerImage:"../images/3w_cuisines_india_europe.png";
 
 .header {
-    @include mx.fluxContainer;
+    @include m.fluxContainer;
     background-image: url($headerImage);
     background-size: cover;
     min-height: 300px; 
@@ -18,17 +19,58 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
         color:rgb(255, 255, 120);
         font-size:100px;
         font-weight: bolder;
-        z-index: 9;
     }
 }
 
-.suggestions {
-    display: flex;
-    gap: 20px;
-    margin: 30px;
-    div {
-        background-color: rgb(238, 224, 255);
-        min-height: 300px;
-        min-width: 300px;
+.mood{
+    background-color: wheat;
+    margin: 4rem 0;
+    &Div{
+        max-height: 50rem;
+        max-width: 90rem;
+        background-color: pink;
+        margin:auto;
+    }
+    &Sec{
+        display: flex;
+        gap: 3rem;
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        img{
+            height: 10rem;
+            width: 10rem;
+            background-color: rgb(137, 64, 0);
+            // border-radius: 50%;
+        }
+        h4{
+            text-align: center;
+        }
+    }
+    &TitleDiv{
+        background-color: green;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .arrowContainer{
+            display: flex;
+            background-color: yellow;
+            gap: 1rem;
+            .arrow{
+                @include m.fluxContainer;
+                background-color: v.$btnClr;
+                height: 3rem;
+                width: 3rem;
+                border-radius: 50%;
+                button{
+                    background-color: v.$btnClr;
+                    border-radius: 50%;
+                    border: none;
+                    font-size: xx-large;
+                }
+            }
+        }  
+
     }
 }
