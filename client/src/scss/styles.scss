@@ -16,26 +16,26 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
     min-height: 300px; 
     // opacity: .33;
     h1 {
-        color:rgb(255, 255, 120);
+        color:rgb(251, 244, 116);
         font-size:100px;
         font-weight: bolder;
     }
 }
 
 .mood{
-    background-color: wheat;
+    background-color: rgb(56, 67, 31);
     margin: 4rem 0;
     &Div{
         max-height: 50rem;
         max-width: 90rem;
-        background-color: pink;
+        background-color: rgb(57, 47, 76);
         margin:auto;
     }
     &Sec{
         display: flex;
         gap: 3rem;
         position: relative;
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: hidden;
         scroll-behavior: smooth;
         img{
@@ -55,7 +55,7 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
         align-items: center;
         .arrowContainer{
             display: flex;
-            background-color: yellow;
+            background-color: rgb(73, 73, 57);
             gap: 1rem;
             .arrow{
                 @include m.fluxContainer;
@@ -72,5 +72,75 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
             }
         }  
 
+    }
+}
+
+
+//******************** FOOTER*********************
+footer {
+    @include m.fluxContainer;
+    min-height: 10rem;
+    width: 100%;
+    background-color: rgb(48, 65, 71);
+    // position: fixed;
+    flex-direction: column;
+    // bottom: 0;
+    margin: 5rem 0 0 0;
+    .copyright{
+        @include m.fluxContainer;
+        margin: 1rem;
+        background-color: magenta;
+        min-width: 100rem;
+    }
+    .about{
+        background-color: rgb(3, 118, 124);
+        min-width: 100rem;
+        @include m.fluxContainer;
+        justify-content: space-around;
+        h6{
+            font-weight: bold;
+        }
+    }
+}
+
+//******************** DISHES GRID *********************
+.dishes {
+    background-color: rgb(67, 13, 59);
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        background-color: rgb(52, 85, 76);
+        gap: 3rem;
+        max-width: 100rem;
+    }
+
+    .item {
+        background-color: rgb(120, 226, 238);
+        max-width: 22.375rem;
+        height: 25rem;
+        margin-top: 2rem;
+        .slider{
+            overflow-x: auto; // Enable horizontal scrolling
+            overflow-y: hidden; // Disable vertical scrolling
+            white-space: nowrap; // Prevent wrapping of inline-block elements
+            background-color:red;
+            height: 20rem;
+            width: 100%;
+            .imgDiv{
+                display: inline-block; // Align elements horizontally
+                background-color: rgb(73, 109, 1);
+                height: 100%;
+                width: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 15px;
+                    padding: 5px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
     }
 }
