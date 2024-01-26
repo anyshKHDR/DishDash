@@ -1,17 +1,17 @@
 @use "./abstracts/mixins" as m;
 @use "./abstracts/variables" as v;
 
+//******************** BODY *********************
 body {
     background-color: rgb(52, 21, 31);
     box-sizing: content-box;
 
 }
 
-$headerImage:"../images/3w_cuisines_india_europe.png";
-
+//******************** HEADER *********************
 .header {
     @include m.fluxContainer;
-    background-image: url($headerImage);
+    background-image: url(v.$headerImage);
     background-size: cover;
     min-height: 300px; 
     // opacity: .33;
@@ -22,6 +22,34 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
     }
 }
 
+//******************** FOOTER *********************
+footer {
+    @include m.fluxContainer;
+    min-height: 10rem;
+    width: 100%;
+    background-color: rgb(48, 65, 71);
+    // position: fixed;
+    flex-direction: column;
+    // bottom: 0;
+    margin: 5rem 0 0 0;
+    .copyright{
+        @include m.fluxContainer;
+        margin: 1rem;
+        background-color: magenta;
+        min-width: 100rem;
+    }
+    .about{
+        background-color: rgb(3, 118, 124);
+        min-width: 100rem;
+        @include m.fluxContainer;
+        justify-content: space-around;
+        h6{
+            font-weight: bold;
+        }
+    }
+}
+
+//******************** MOOD *********************
 .mood{
     background-color: rgb(56, 67, 31);
     margin: 4rem 0;
@@ -38,15 +66,6 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
         overflow-x: hidden;
         overflow-y: hidden;
         scroll-behavior: smooth;
-        img{
-            height: 10rem;
-            width: 10rem;
-            background-color: rgb(137, 64, 0);
-            // border-radius: 50%;
-        }
-        h4{
-            text-align: center;
-        }
     }
     &TitleDiv{
         background-color: green;
@@ -74,37 +93,17 @@ $headerImage:"../images/3w_cuisines_india_europe.png";
 
     }
 }
-
-
-//******************** FOOTER*********************
-footer {
-    @include m.fluxContainer;
-    min-height: 10rem;
+.sImg{
+    object-fit: cover;
+    object-position: center;
+    background-color: red;
+    height: 100%;
     width: 100%;
-    background-color: rgb(48, 65, 71);
-    // position: fixed;
-    flex-direction: column;
-    // bottom: 0;
-    margin: 5rem 0 0 0;
-    .copyright{
-        @include m.fluxContainer;
-        margin: 1rem;
-        background-color: magenta;
-        min-width: 100rem;
-    }
-    .about{
-        background-color: rgb(3, 118, 124);
-        min-width: 100rem;
-        @include m.fluxContainer;
-        justify-content: space-around;
-        h6{
-            font-weight: bold;
-        }
-    }
 }
 
+
 //******************** DISHES GRID *********************
-.dishes {
+.restaurant {
     background-color: rgb(67, 13, 59);
 
     .container {
@@ -118,17 +117,16 @@ footer {
     .item {
         background-color: rgb(120, 226, 238);
         max-width: 22.375rem;
-        height: 25rem;
-        margin-top: 2rem;
+        height: 27rem;
         .slider{
-            overflow-x: auto; // Enable horizontal scrolling
-            overflow-y: hidden; // Disable vertical scrolling
+            overflow: hidden;
             white-space: nowrap; // Prevent wrapping of inline-block elements
             background-color:red;
             height: 20rem;
             width: 100%;
             .imgDiv{
                 display: inline-block; // Align elements horizontally
+                transition: transform 1s ease-in-out;
                 background-color: rgb(73, 109, 1);
                 height: 100%;
                 width: 100%;
@@ -142,5 +140,79 @@ footer {
                 }
             }
         }
+    }
+
+    .details{
+        @include m.vDiv(100px,auto,yellow);
+        .nameAndRating{
+            @include m.fluxContainer;
+            @include m.vDiv(2rem);
+            justify-content: space-between;
+            .name{
+                @include m.vDiv(auto,auto,yellow);
+                height: 1.5rem;
+                margin-inline: 5px
+            }
+            .rating{
+                @include m.vDiv(1.5rem,auto,yellow);
+                margin-inline: 5px
+            }
+        } 
+        .locationAndDTime{
+            @include m.fluxContainer;
+            @include m.vDiv(1.5rem,auto,violet);
+            justify-content: space-between;
+            .location{
+                @include m.vDiv(1.5rem,auto,rgb(55, 127, 228));
+                margin: 5px;
+            }
+            .DTime{
+                @include m.vDiv(1.5rem,auto,rgb(55, 127, 228));
+                margin: 5px;
+            }
+        } 
+        .type{
+            @include m.vDiv(1.5rem,auto,pink)
+        } 
+        .activeTime{
+            @include m.vDiv(1.5rem,auto,red)
+        } 
+    }
+}
+
+
+//******************** MENU *********************
+.restaurantDetails {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: .5rem;
+    background-color: green;
+    
+    .nameAndRating{
+        height: 2rem;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content:space-between;
+        .name{
+            float: left;
+            background-color: yellow;
+        }
+        .rating{
+            float: right;
+            background-color: lightblue;
+        }
+    }
+    .location{
+    background-color: peachpuff;
+    }
+    .activeTime{
+        background-color: pink;
+    }
+    .cuisines{
+        background-color: lavenderblush;
+    }
+    .deliveryCharge{
+        background-color: lavender;
     }
 }

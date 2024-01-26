@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
+import SuggestionItem from "./SuggestionItem";
 
-const DishSuggestion = ({title})=>{
-    console.log(title)
+const Suggestion = ({title})=>{
 
     // Custom scroll function: Uses moodSectionRef to access the DOM's scrollLeft for horizontal scrolling.
     // useRef and ref are React's API for referencing DOM nodes. scrollLeft is a Web API property.
@@ -15,7 +15,9 @@ const DishSuggestion = ({title})=>{
         <div className="mood">
             <div className="moodDiv">
                 <div className="moodTitleDiv">
+
                     <h1 className="moodTitle">{title}</h1>
+
                     <div className="arrowContainer">
                         <div className="arrow" onClick={()=>scroll(-400)}>
                             <button>←</button>
@@ -24,60 +26,15 @@ const DishSuggestion = ({title})=>{
                             <button>→</button>
                         </div>
                     </div>
+                    
                 </div>
+
                 <section className="moodSec" ref={elementRef}>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
-                    <section>
-                        <img src="https://thehintofrosemary.com/wp-content/uploads/2020/02/ramen-cover-2048x2048.jpg" alt="" />
-                        <h4>Ramen</h4>
-                    </section>
+                    <SuggestionItem />
                 </section>
             </div>
         </div>
     )
 };
 
-export default DishSuggestion;
+export default Suggestion;

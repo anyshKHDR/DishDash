@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Dishes= ()=>{
+const Items = ()=>{
 
     const imageURL = [
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tasteofhome.com%2Fwp-content%2Fuploads%2F2021%2F01%2Ftasty-butter-chicken-curry-dish-from-indian-cuisine-1277362334.jpg&f=1&nofb=1&ipt=7a185bf3918e5f78b94cd0232d2c86f4543de6a1f4c3d001d49886c5b0d2affc&ipo=images",
@@ -22,20 +22,42 @@ const Dishes= ()=>{
         };
         
     },[imageURL.length])
-    
+
     return(
-        <div className="dishes">
-            <div className="container">
-                <div className="item">
-                    <div className="slider">
-                            <div className="imgDiv" >
-                                <img src={imageURL[currentImg]} alt="" />
-                            </div>
+        <div className="item">
+            <div className="slider">
+                {imageURL.map( (cImg,index)=> 
+                    <div className="imgDiv" key={cImg} style={{ transform: `translateX(-${currentImg * 100}%)` }}>
+                        <img src={imageURL[index]} alt="" />
                     </div>
-                </div> 
+                )}
             </div>
-        </div>
+            <div className="details">
+                <div className="nameAndRating">
+                    <div className="name">
+                        <h3>Dude's cafe</h3>
+                    </div>
+                    <div className="rating">
+                        <h3>2.5</h3>
+                    </div>
+                </div>
+                <div className="locationAndDTime">
+                    <div className="location">
+                        <h5>Chennai</h5>
+                    </div>
+                    <div className="DTime">
+                        <h6>30min</h6>
+                    </div>
+                </div>
+                <div className="type">
+                    <h6>desserts, Indian, Italian, Chinese</h6>
+                </div>
+                <div className="activeTime">
+                    <h6>10AM - 12PM</h6>
+                </div>
+            </div>
+        </div> 
     )
 }
 
-export default Dishes;
+export default Items;

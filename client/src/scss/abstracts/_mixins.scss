@@ -3,3 +3,10 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin vDiv($h:auto, $w:auto, $c:palegreen, $m:0){
+    height: $h;
+    width: $w;
+    background-color: $c;
+    margin: $m;
+}
