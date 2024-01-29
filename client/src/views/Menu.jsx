@@ -8,7 +8,6 @@ const Menu = ()=>{
         <>
             <RestaurantDetail />
             <DishesAndCategory />
-
         </>
     )
 }
