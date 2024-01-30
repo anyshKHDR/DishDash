@@ -189,8 +189,8 @@ footer {
     margin: 2rem auto;
     padding: .5rem;
     background-color: green;
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     .nameAndRating{
         height: 2rem;
         width: 100%;
@@ -223,9 +223,9 @@ footer {
 //******************** DISHES *********************
 .diseshAndCat{
     @include m.fluxContainer;
-    overflow: scroll;
-    // position: sticky;
-    // margin-top: 178px;
+    // overflow: scroll;
+    position: sticky;
+    top: 0;
     .navigation{//*****************
         height: 50rem;
         width: 25rem;
@@ -253,5 +253,109 @@ footer {
     }
     .active{
         background-color: red;
+    }
+}
+
+//******************** RestaurantOwner *********************
+.rHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: 20px 50px;
+    .avatar{//**********************
+        img{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .rDetail{//**********************
+        text-align: center;
+    }
+    .edit{//**********************
+            height: 150px;
+            width: 150px;
+            @include m.fluxContainer;
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+.editMenu{
+    background-color: pink;
+    @include m.fluxContainer;
+    margin: 1rem 0rem;
+    *{
+        margin: 20px 50px;
+    }
+}
+
+.formContainer{
+    background-color: bisque;
+    @include m.fluxContainer;
+    margin-top: 1rem;
+    .dishForm{
+        display: flex;
+        justify-content:space-around;
+        background-color: lavender;
+        width: 70rem;
+
+        .prime > div{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            label{
+                margin-right: 1rem;
+            }
+        }
+
+        .dDescription{
+            display: flex;
+        }
+
+        .dType, .cuisine {
+            margin-top: 2rem;
+            label{
+                margin-left: 1rem;    
+            }
+        }
+        
+        .cat{
+            margin-top: 1rem;
+            .r1{
+                margin-bottom: .4rem;
+            }
+            button{
+                margin-left: 1rem;
+            }
+            label{
+                margin-right: 1rem;
+            }
+        }
+
+        .submitForm{
+            float: right;
+        }
+
+        .d2{
+            height: 100%;
+            img{
+                height: 200px;
+                width: 200px;
+                background-color: black;
+                margin-top: 1rem;
+            }
+            .submit{
+                margin-top: 13rem;
+            }
+
+        }
     }
 }
