@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { showForm } from "../app/features/dishFormSlice"
 
 const NewDishe = ()=>{
     const [newCat, setNewCat] = useState(false);
+
+    const dispatch = useDispatch();
 
     return(
         <div className="formContainer">
@@ -41,8 +45,8 @@ const NewDishe = ()=>{
                         <div>
                             <label htmlFor="newCat">Create new Category</label>
                             <input type="text" name="newCat" id="newCat" />
-                            <button type="button" className="btn btn-success" onClick={()=>setNewCat(false)}>Create</button>
-                            <button type="button" className="btn btn-warning">Cancel</button>
+                            <button type="button" className="btn btn-success" >Create</button>
+                            <button type="button" className="btn btn-warning" onClick={()=>setNewCat(false)} >Cancel</button>
                         </div>
                         }
                     </div>
@@ -107,6 +111,7 @@ const NewDishe = ()=>{
                     </div>
                     <div className="submit">
                             <button type="button" className="btn btn-success submitForm">Submit</button>
+                            <button className="btn btn-warning" onClick={()=>dispatch(showForm())}>Cancel</button>
                     </div>
                 </div>
             </div>

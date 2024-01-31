@@ -18,6 +18,9 @@ const Footer = ()=>{
                 <div>
                     <h6>Contact Us</h6>
                 </div>
+                <div>
+                    <h6 >Partner With Us</h6>
+                </div>
             </div>
         </footer>
     )

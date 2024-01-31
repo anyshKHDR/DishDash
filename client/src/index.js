@@ -7,9 +7,9 @@ import App from "./App.jsx";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-    <StrictMode>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </StrictMode>
+        <StrictMode>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </StrictMode>
 );

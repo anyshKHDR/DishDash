@@ -4,16 +4,29 @@ import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Menu from "./views/Menu";
 import RestaurantOwner from "./views/RestaurantOwner";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 const App = ()=>{
+    const router = createBrowserRouter([
+        {
+            path:"/",
+            element:<Home />
+        },
+        {
+            path:"/menu",
+            element:<Menu />
+        },
+        {
+            path:"/business",
+            element:<RestaurantOwner />
+        }
+    ])
     return(
         <>
             <Header /> 
 
-            {/* <Home />     */}
-            {/* <Menu /> */}
-            <RestaurantOwner />
-
+                <RouterProvider router={router} /> 
+            
             <Footer />
         </>
     )

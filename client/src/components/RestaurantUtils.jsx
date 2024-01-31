@@ -1,18 +1,24 @@
 import React from "react";
+import { useSelector,useDispatch } from "react-redux";
 import DishesAndCategory from "./DishesAndCategory";
 import NewDishe from "./NewDish";
+import MenuManage from "./MenuMange";
 
 const ManageMenu = ()=>{
+
+    const formStatus = useSelector((state)=>state.dishForm.value);
+
     return(
         <div className="manage">
-            <div className="editMenu">
-                <button type="button" class="btn btn-primary btn-lg">Edit Dishes and Category</button>
-                <button type="button" class="btn btn-success btn-lg">Add Dishes and Category</button>
-            </div>
 
-
-            {/* <DishesAndCategory /> */}
+            {formStatus?
             <NewDishe />
+            :
+            <>
+                <MenuManage />
+                <DishesAndCategory />
+            </>
+            }
         </div>
 
     )

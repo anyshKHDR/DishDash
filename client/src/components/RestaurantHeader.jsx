@@ -1,6 +1,7 @@
 import React from "react";
 
 const RestaurantHeader = ()=>{
+
     return(
         <div className="rHead">
 

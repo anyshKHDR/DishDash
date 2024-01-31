@@ -1,7 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
+import dishFormReducer from "./features/dishFormSlice.js";
 
 export const store = configureStore({
-    reducer : {
-
-    }
+    reducer:{
+        dishForm: dishFormReducer,
+    },
 })
