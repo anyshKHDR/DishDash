@@ -22,15 +22,6 @@ const DishesAndCategory = ()=>{
         "https://images.alphacoders.com/293/293831.jpg"
     ]
 
-        useEffect(() => {
-        // This will run when the component mounts
-        // Modifies the URL by removing the fragment identifier (hash part). This prevents 
-        // the page from automatically scrolling to a section based on the URL fragment 
-        // when the component mounts. It uses 'pushState' to change the URL without 
-        // reloading the page or navigating away, ensuring the user stays on the current view.
-        window.history.pushState("", document.title, window.location.pathname + window.location.search);
-        }, []);
-    
     return(
             // nav
     <div className="theContainer">

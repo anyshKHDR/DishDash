@@ -363,3 +363,43 @@ footer {
         }
     }
 }
+
+.PWU{
+    .bButtons,.bDiv{
+        @include m.fluxContainer;
+        margin:1rem;
+        background-color: lightpink;
+    }
+    .bDiv{
+        background-color: lightsalmon;
+        justify-content: space-around ;
+        button{
+            margin: 2rem;
+        }
+    }
+    .RDRow,.documentList,.r1,.r1>*{
+        @include m.fluxContainer;
+        background-color: goldenrod;
+        margin: .8rem;
+    }
+    .documentList{
+        background-color: honeydew;
+        display: block;
+        h3{
+            text-align: center;
+        }
+        .r1{
+            background-color: antiquewhite;
+            margin: 2px;
+            & > div {
+                margin-inline: 2rem;
+                background-color: mediumaquamarine;
+                border-radius: 10px;
+                *{
+                    margin: auto;
+                    padding: .5rem;
+                }
+            }
+        }                
+    }
+}

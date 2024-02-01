@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = ()=>{
     
@@ -19,7 +20,7 @@ const Footer = ()=>{
                     <h6>Contact Us</h6>
                 </div>
                 <div>
-                    <h6 >Partner With Us</h6>
+                    <Link to="/business" style={{color:"black", textDecoration:"none"}}><h6 >Partner With Us</h6></Link> 
                 </div>
             </div>
         </footer>
