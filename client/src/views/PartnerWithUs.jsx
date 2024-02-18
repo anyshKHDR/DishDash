@@ -1,41 +1,32 @@
-import React from "react";
-import Button from "../components/Button";
+import React, { useCallback } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showSignIn, showSignUP } from "../app/features/signInSlice";
+import DocumentsRequired from "../components/DocumentsRequiered";
 
 const PartnerWithUs = ()=>{
 
-    
+    const dispatch = useDispatch();
+
     return(
         <div className="PWU">
             <div className="bButtons">
                 <div className="bDiv">
-                <Button 
-                    text={"Register your restaurant"}
-                    className={"btn btn-light"}
-                    // style={{color:"red", border:"green", padding:"20px"}}
-                />
-                <Button 
-                    text={"Login to your existing restaurant"}
-                    className={"btn btn-light"}
-                    // style={{color:"red", border:"green", padding:"20px"}}
-                />
+                    <Link to="/UAuth">
+                        <button className="btn btn-light" 
+                        onClick={()=>dispatch(showSignUP())}>
+                            SignUp and register your restaurant
+                        </button>
+                    </Link>
+                    <Link to="/UAuth">
+                        <button className="btn btn-light" 
+                        onClick={()=>dispatch(showSignIn())}>
+                            Login to your existing restaurant
+                        </button>
+                    </Link>
                 </div>
             </div>
-
-            <div className="RDRow">
-                <div className="documentList">
-                    <h3>Required documents to register</h3>
-                    <div className="r1">
-                        <div><p>FSSAI license copy</p></div>
-                        <div><p>Regular GSTIN (if applicable)</p></div>
-                        <div><p>PAN card copy</p></div>
-                    </div>
-                    <div className="r1">
-                        <div><p>Bank account details</p></div>
-                        <div><p>Your restaurant menu</p></div>
-                        <div><p>Dish images for top 5 items</p></div>
-                    </div>
-                </div>
-            </div>
+            <DocumentsRequired />
         </div>
     )
 }

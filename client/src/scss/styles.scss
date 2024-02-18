@@ -373,7 +373,8 @@ footer {
     .bDiv{
         background-color: lightsalmon;
         justify-content: space-around ;
-        button{
+        a{
+            outline: none;
             margin: 2rem;
         }
     }
@@ -402,4 +403,31 @@ footer {
             }
         }                
     }
+}
+
+.sSCntnr{
+    @include m.fluxContainer;
+    margin: 1rem;
+    h2{
+        text-align: center;
+    }
+    .lDtls {
+        margin: 1rem;
+        background-color: lightblue;
+        border-radius: 1rem;
+        input{
+            width: 30rem;
+            border-radius: .3rem;
+            border-width: 0px;
+        }
+        .lBtnDiv{
+            float: right;
+            a{
+                outline: none;
+            }
+            button{
+            margin-inline: 1rem;
+            }
+        }
+    }    
 }
