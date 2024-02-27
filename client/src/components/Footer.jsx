@@ -8,7 +8,7 @@ const Footer = ()=>{
         <footer>
             <div className="copyright">
                 <div className="fLogo">
-                    <img src="https://cdn.freebiesupply.com/logos/large/2x/linux-tux-1-logo-png-transparent.png" alt="" />
+                    {/* <img src="https://cdn.freebiesupply.com/logos/large/2x/linux-tux-1-logo-png-transparent.png" alt="" /> */}
                 </div>
                 <p>© {year} DineDash Pvt. Ltd</p>
             </div>

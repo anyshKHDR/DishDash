@@ -10,8 +10,8 @@ import Menu from "./views/Menu.jsx";
 import RestaurantOwner from "./views/RestaurantOwner.jsx";
 import Layout from "./components/Layout.jsx";
 import PartnerWithUs from "./views/PartnerWithUs.jsx";
-import UserAuthentication from "./views/UAuth.jsx";
-import UAuth from "./views/UAuth.jsx";
+// import UserAuthentication from "./views/rOwnerSU.jsx";
+import UAuth from "./views/rOwnerSU.jsx";
 
 const router = createBrowserRouter([
     {

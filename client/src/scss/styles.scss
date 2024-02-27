@@ -425,9 +425,43 @@ footer {
             a{
                 outline: none;
             }
-            button{
-            margin-inline: 1rem;
+            .cBtn{
+            margin-right: 2rem;
+            }
+            .sBtn{
+                margin-right: .1rem;
             }
         }
+        #pass{
+            position: absolute;
+            margin-bottom: 1rem;
+        }
+        #cPass{
+            position: absolute;
+            margin-top: -1.5rem;
+        }
+        #eyeFillIconC,#eyeFillIconCN{
+            position: relative;
+            float: right;
+            margin-right: .5rem;
+            margin-top: .17rem;
+            height: 22px;
+            width: 22px;
+        }
+        #eyeFillIconCP,#eyeFillIconCPN{
+            position: relative;
+            float: right;
+            margin-right: .5rem;
+            margin-top: -1.4rem;
+            height: 22px;
+            width: 22px;
+        }
+        .pwdSText{
+            display: inline-block;
+            color: red;
+            margin-top: 1.6rem;
+        }
+        
     }    
 }
+

@@ -1,8 +1,8 @@
 import express from "express";
-import {getRestaurant} from "../controllers/restaurant.js"
+import {postRSignUp} from "../controllers/restaurant.js"
 
 const router = express.Router();
 
-router.get("/", getRestaurant)
+router.post("/owner/signup", postRSignUp)
 
 export default router;

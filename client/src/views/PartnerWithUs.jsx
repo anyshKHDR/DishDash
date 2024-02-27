@@ -15,13 +15,13 @@ const PartnerWithUs = ()=>{
                     <Link to="/UAuth">
                         <button className="btn btn-light" 
                         onClick={()=>dispatch(showSignUP())}>
-                            SignUp and register your restaurant
+                            Sign Up
                         </button>
                     </Link>
                     <Link to="/UAuth">
                         <button className="btn btn-light" 
                         onClick={()=>dispatch(showSignIn())}>
-                            Login to your existing restaurant
+                            Log In
                         </button>
                     </Link>
                 </div>
