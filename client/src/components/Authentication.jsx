@@ -119,8 +119,8 @@ const Authenticate= ()=>{
                                 </svg>
                             </span>
                         }
-                        {/* <p className="pwdSText" style={!stronPass?{color:"red"}:{color:"green"}}>{stronPass==null?"":!stronPass? "Password is not strong enough.It must be at least 8 characters long, include uppercase and lowercase letters, contain numbers, and symbols": "Password is strong"} </p>  */}
-                        {!stronPass?
+                        <p className="pwdSText" style={!stronPass?{color:"red"}:{color:"green"}}>{stronPass==null?"":!stronPass? "Password is not strong enough.": "Password is strong"} </p> 
+                        {/* {!stronPass?
                             <>
                                 <p className="pwdSText" style={{color:"red", marginBottom:"0"}}>Password is not strong enough</p> 
                                 <p style={{margin:"0"}}>It must be at least 8 characters long, includes uppercase and</p>
@@ -130,7 +130,7 @@ const Authenticate= ()=>{
                             <>
                                 <p className="pwdSText" style={{color:"green"}}>Password is strong</p>
                             </>
-                        }
+                        } */}
                     </div>
 
                     {!signIn &&
